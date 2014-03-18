@@ -4,7 +4,7 @@
     <tr>
         <td></td>
         <td align="right"><img src="<spring:url value="/resources/images/springsource-logo.png" htmlEscape="true" />"
-                               alt="Sponsored by SpringSource"/></td>
+                               alt="Patrocinado por SpringSource"/></td>
     </tr>
 </table>
 

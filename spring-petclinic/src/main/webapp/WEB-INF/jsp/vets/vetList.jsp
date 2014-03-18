@@ -14,7 +14,7 @@
 <div class="container">
     <jsp:include page="../fragments/bodyHeader.jsp"/>
 
-    <h2>Veterinarians</h2>
+    <h2><fmt:message key="Veterians"/></h2>
 
     <datatables:table id="vets" data="${vets.vetList}" cdn="true" row="vet" theme="bootstrap2" cssClass="table table-striped" paginate="false" info="false">
         <datatables:column title="Name">
@@ -31,10 +31,10 @@
     <table class="table-buttons">
         <tr>
             <td>
-                <a href="<spring:url value="/vets.xml" htmlEscape="true" />">View as XML</a>
+                <a href="<spring:url value="/vets.xml" htmlEscape="true" />"><fmt:message key="viewAsXml"/></a>
             </td>
             <td>
-                <a href="<spring:url value="/vets.atom" htmlEscape="true" />">Subscribe to Atom feed</a>
+                <a href="<spring:url value="/vets.atom" htmlEscape="true" />"><fmt:message key="subscribeAtomFeed"/></a>
             </td>
         </tr>
     </table>

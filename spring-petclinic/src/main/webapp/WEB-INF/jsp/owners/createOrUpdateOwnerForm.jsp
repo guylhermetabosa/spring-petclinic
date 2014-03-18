@@ -8,7 +8,7 @@
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
 
 
-<html lang="en">
+<html lang="pt">
 
 <jsp:include page="../fragments/headTag.jsp"/>
 
@@ -24,19 +24,19 @@
         <c:if test="${owner['new']}">New </c:if> Owner
     </h2>
     <form:form modelAttribute="owner" method="${method}" class="form-horizontal" id="add-owner-form">
-        <petclinic:inputField label="First Name" name="firstName"/>
-        <petclinic:inputField label="Last Name" name="lastName"/>
-        <petclinic:inputField label="Address" name="address"/>
-        <petclinic:inputField label="City" name="city"/>
-        <petclinic:inputField label="Telephone" name="telephone"/>
+        <petclinic:inputField label=<fmt:message key="firstName"/> name="firstName"/>
+        <petclinic:inputField label=<fmt:message key="lastName"/> name="lastName"/>
+        <petclinic:inputField label=<fmt:message key="address"/> name="address"/>
+        <petclinic:inputField label=<fmt:message key="city"/> name="city"/>
+        <petclinic:inputField label=<fmt:message key="telephone"/> name="telephone"/>
 
         <div class="form-actions">
             <c:choose>
                 <c:when test="${owner['new']}">
-                    <button type="submit">Add Owner</button>
+                    <button type="submit"><fmt:message key="addOwner"/></button>
                 </c:when>
                 <c:otherwise>
-                    <button type="submit">Update Owner</button>
+                    <button type="submit"><fmt:message key="updateOwner"/></button>
                 </c:otherwise>
             </c:choose>
         </div>

@@ -6,14 +6,14 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="datatables" uri="http://github.com/dandelion/datatables" %>
 
-<html lang="en">
+<html lang="pt">
 
 <jsp:include page="../fragments/headTag.jsp"/>
 
 <body>
 <div class="container">
     <jsp:include page="../fragments/bodyHeader.jsp"/>
-    <h2>Owners</h2>
+    <h2><fmt:message key="owners"/></h2>
     
     <datatables:table id="owners" data="${selections}" cdn="true" row="owner" theme="bootstrap2" 
                       cssClass="table table-striped" paginate="false" info="false" export="pdf">

@@ -25,10 +25,10 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Name</th>
-            <th>Birth Date</th>
-            <th>Type</th>
-            <th>Owner</th>
+            <th><fmt:message key="name"/></th>
+            <th><fmt:message key="birthDate"/></th>
+            <th><fmt:message key="type"/></th>
+            <th><fmt:message key="owner"/></th>
         </tr>
         </thead>
         <tr>
@@ -41,7 +41,7 @@
 
     <form:form modelAttribute="visit">
         <div class="control-group">
-            <label class="control-label">Date </label>
+            <label class="control-label"><fmt:message key="date"/> </label>
 
             <div class="controls">
                 <form:input path="date"/>
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label">Description </label>
+            <label class="control-label"><fmt:message key="description"/> </label>
 
             <div class="controls">
                 <form:input path="description"/>
@@ -58,16 +58,16 @@
         </div>
         <div class="form-actions">
             <input type="hidden" name="petId" value="${visit.pet.id}"/>
-            <button type="submit">Add Visit</button>
+            <button type="submit"><fmt:message key="addVisit"/></button>
         </div>
     </form:form>
 
     <br/>
-    <b>Previous Visits</b>
+    <b><fmt:message key="prevVisits"/></b>
     <table style="width: 333px;">
         <tr>
-            <th>Date</th>
-            <th>Description</th>
+            <th><fmt:message key="date"/></th>
+            <th><fmt:message key="description"/></th>
         </tr>
         <c:forEach var="visit" items="${visit.pet.visits}">
             <c:if test="${!visit['new']}">
